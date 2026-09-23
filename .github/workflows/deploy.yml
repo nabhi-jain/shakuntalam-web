@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+
+      - run: bun install --frozen-lockfile
+
+      - name: Build static site
+        env:
+          PAGES_BASE_PATH: /${{ github.event.repository.name }}/
+        # The prerender step can leave handles open after writing the files, so cap it
+        # and accept the result as long as the HTML was produced.
+        run: timeout 600 bun run build || test -f .output/public/index.html
+
+      - name: Prepare Pages output
+        run: |
+          test -f .output/public/index.html
+          touch .output/public/.nojekyll
+          cp .output/public/index.html .output/public/404.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .output/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

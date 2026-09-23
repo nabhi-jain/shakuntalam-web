@@ -6,10 +6,20 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Set by the GitHub Pages workflow (e.g. "/shakuntalam-web/"). When present, the build
+// prerenders every page to plain HTML under that sub-path instead of emitting a server bundle.
+// Lovable builds leave it unset and are unaffected.
+const pagesBase = process.env.PAGES_BASE_PATH;
+
 export default defineConfig({
+  ...(pagesBase && {
+    vite: { base: pagesBase },
+    nitro: { preset: "node-server" },
+  }),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    ...(pagesBase && { prerender: { enabled: true, crawlLinks: true } }),
   },
 });
