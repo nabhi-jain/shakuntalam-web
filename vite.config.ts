@@ -14,7 +14,6 @@ const pagesBase = process.env.PAGES_BASE_PATH;
 export default defineConfig({
   ...(pagesBase && {
     vite: { base: pagesBase },
-    nitro: { preset: "node-server" },
   }),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
