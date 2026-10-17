@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDownRight, ArrowUpRight, Building2, GraduationCap, HeartPulse, LineChart, Mail, ShieldCheck, Store } from "lucide-react";
 import { type ReactNode } from "react";
 import educationImage from "@/assets/education-family.jpg";
@@ -36,6 +36,7 @@ function Index() {
             <a className="transition-colors hover:text-primary" href="#portfolio">Who we support</a>
             <a className="transition-colors hover:text-primary" href="#platform">How it works</a>
             <a className="transition-colors hover:text-primary" href="#risk">Our approach</a>
+            <Link className="transition-colors hover:text-primary" to="/refund-policy">Refund Policy</Link>
           </nav>
           <a href="#contact" className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-foreground">
             Connect <ArrowUpRight className="size-4" aria-hidden="true" />
