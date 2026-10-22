@@ -137,8 +137,13 @@ function Index() {
 
       <footer className="border-t border-border bg-card">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-10 text-sm text-muted-foreground sm:flex-row sm:items-end sm:justify-between lg:px-8">
+
           <div><img src={logo} alt="Shankuntalam Securities Private Limited" loading="lazy" width={1528} height={255} className="w-64" /><p className="mt-3">Lending built around everyday cashflows.</p></div>
+          <div>
+
           <div className="sm:text-right"><a className="font-medium text-primary hover:underline" href="mailto:support@shakuntalamsecurities.com">support@shakuntalamsecurities.com</a><p className="mt-2">© 2026 Shankuntalam Securities Private Limited.</p></div>
+          <div className="sm:text-right"><p className="mt-2">Legal Name: Shankuntalam Securities Private Limited.</p></div>
+          </div>
         </div>
       </footer>
     </main>
