@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Shankuntalam Securities" },
+      { title: "Shakuntlam Securities" },
       { name: "description", content: "Technology-led lending for visible cashflows." },
-      { name: "author", content: "Shankuntalam Securities Private Limited" },
+      { name: "author", content: "Shakuntlam Securities Private Limited" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

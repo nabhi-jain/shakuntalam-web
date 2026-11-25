@@ -7,7 +7,7 @@ export const Route = createFileRoute("/refund-policy")({
     meta: [
       {
         title:
-          "Refund, Reversal & Loan Cancellation Policy | Shankuntalam Securities",
+          "Refund, Reversal & Loan Cancellation Policy | Shakuntlam Securities",
       },
       {
         name: "description",
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/refund-policy")({
       {
         property: "og:title",
         content:
-          "Refund, Reversal & Loan Cancellation Policy | Shankuntalam Securities",
+          "Refund, Reversal & Loan Cancellation Policy | Shakuntlam Securities",
       },
       {
         property: "og:description",
@@ -45,7 +45,7 @@ function RefundPolicyPage() {
 
           <img
             src={logo}
-            alt="Shankuntalam Securities Private Limited"
+            alt="Shakuntlam Securities Private Limited"
             className="h-auto w-44 sm:w-52"
           />
         </div>

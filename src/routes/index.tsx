@@ -13,9 +13,9 @@ import logo from "@/assets/shakuntalam-logo-transparent.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Shankuntalam Securities — Lending for Everyday India" },
+      { title: "Shakuntlam Securities — Lending for Everyday India" },
       { name: "description", content: "Cashflow-visible education, healthcare and merchant lending designed around the real journeys of everyday India." },
-      { property: "og:title", content: "Shankuntalam Securities — Lending for Everyday India" },
+      { property: "og:title", content: "Shakuntlam Securities — Lending for Everyday India" },
       { property: "og:description", content: "Short-term lending for education, healthcare and neighborhood businesses." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,8 +29,8 @@ function Index() {
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <header className="relative z-20 border-b border-border bg-background/95 backdrop-blur-md">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
-          <a href="#top" className="block w-[13.5rem] sm:w-[19rem]" aria-label="Shankuntalam Securities Private Limited home">
-            <img src={logo} alt="Shankuntalam Securities Private Limited" width={1528} height={255} className="h-auto w-full" />
+          <a href="#top" className="block w-[13.5rem] sm:w-[19rem]" aria-label="Shakuntlam Securities Private Limited home">
+            <img src={logo} alt="Shakuntlam Securities Private Limited" width={1528} height={255} className="h-auto w-full" />
           </a>
           <nav className="hidden items-center gap-8 text-sm font-medium md:flex" aria-label="Primary navigation">
             <a className="transition-colors hover:text-primary" href="#portfolio">Who we support</a>
@@ -128,9 +128,9 @@ function Index() {
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Institutional partnerships</p>
             <h2 className="mt-5 max-w-3xl font-display text-4xl leading-tight sm:text-6xl">Let’s build credit around cashflows you can see.</h2>
           </div>
-          <a href="mailto:support@shakuntalamsecurities.com" className="inline-flex flex-col items-start gap-1 rounded-md bg-accent px-7 py-4 font-semibold text-accent-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
+          <a href="mailto:support@shakuntlamsecurities.com" className="inline-flex flex-col items-start gap-1 rounded-md bg-accent px-7 py-4 font-semibold text-accent-foreground transition-colors hover:bg-primary hover:text-primary-foreground">
             <span className="inline-flex items-center gap-3"><Mail className="size-5" aria-hidden="true" /> Partnership enquiries</span>
-            <span className="text-sm font-medium">support@shakuntalamsecurities.com</span>
+            <span className="text-sm font-medium">support@shakuntlamsecurities.com</span>
           </a>
         </div>
       </section>
@@ -138,11 +138,11 @@ function Index() {
       <footer className="border-t border-border bg-card">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-10 text-sm text-muted-foreground sm:flex-row sm:items-end sm:justify-between lg:px-8">
 
-          <div><img src={logo} alt="Shankuntalam Securities Private Limited" loading="lazy" width={1528} height={255} className="w-64" /><p className="mt-3">Lending built around everyday cashflows.</p></div>
+          <div><img src={logo} alt="Shakuntlam Securities Private Limited" loading="lazy" width={1528} height={255} className="w-64" /><p className="mt-3">Lending built around everyday cashflows.</p></div>
           <div>
 
-          <div className="sm:text-right"><a className="font-medium text-primary hover:underline" href="mailto:support@shakuntalamsecurities.com">support@shakuntalamsecurities.com</a><p className="mt-2">© 2026 Shankuntalam Securities Private Limited.</p></div>
-          <div className="sm:text-right"><p className="mt-2">Legal Name: Shankuntalam Securities Private Limited.</p></div>
+          <div className="sm:text-right"><a className="font-medium text-primary hover:underline" href="mailto:support@shakuntlamsecurities.com">support@Shakuntlamsecurities.com</a><p className="mt-2">© 2026 Shakuntlam Securities Private Limited.</p></div>
+          <div className="sm:text-right"><p className="mt-2">Legal Name: Shakuntlam Securities Private Limited.</p></div>
           </div>
         </div>
       </footer>
